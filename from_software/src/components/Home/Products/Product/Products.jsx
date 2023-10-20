@@ -6,6 +6,13 @@ const Products = () => {
         <div className="sec-heading"> Section Heading</div>
         <div className="products">
             <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
         </div>
 
     </div>
