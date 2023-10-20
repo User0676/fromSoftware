@@ -5,6 +5,7 @@ import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="footer">
+            <hr></hr>
             <div className="footer-content">
                 <div className="col">
                     <div className="title">About</div>
