@@ -6,6 +6,7 @@ import Category from "./components/Category/Category";
 import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Barnes from "./components/Barnes/Barnes";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/products/:id" element={<Products />} />
+        <Route path="/barnes" element={<Barnes />} />
       </Routes>
       <Footer />
     </BrowserRouter>

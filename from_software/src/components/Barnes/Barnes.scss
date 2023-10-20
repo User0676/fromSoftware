@@ -1,0 +1,99 @@
+.barnes{
+    padding-top: 100px;
+    .barnes-text{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .big-text{
+        font-family: Poynter,Georgia,serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        line-height: 1.25;
+    }
+    .medium-text{
+        font-family: Poynter,Georgia,serif;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 2;
+    }
+    .small-text{
+        font-family: Poynter,Georgia,serif;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 2;
+
+    }
+    .book{
+        margin-bottom: 100px;
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+    
+    .rule-heading{
+        font-weight: 600;
+        font-family: Poynter;
+        display: flex;
+        align-items: flex-end;
+        height: 1em;
+        font-size: 30px;
+        color: #000;
+        letter-spacing: .25px;
+        line-height: .3;
+        &::after{
+            content: " ";
+            position: relative;
+            background-color: #ccc;
+            display: block;
+            height: 1px;
+            -webkit-flex-grow: .5;
+            flex-grow: .5;
+        }
+        &::before{
+            content: " ";
+            position: relative;
+            background-color: #ccc;
+            display: block;
+            height: 1px;
+            -webkit-flex-grow: .5;
+            flex-grow: .5;
+        }
+    }
+}
+.description{
+    display: flex;
+    img{
+        width: 150px;
+        // margin-left: 300px;
+    }
+    .txt{
+        margin-top: 60px;
+        margin-left: 40px;
+        font-family: Lato,sans-serif;
+    }
+    .title{
+        font-size: 19.5px;
+        // line-height: 25px;
+        font-family: Lato,sans-serif;
+        font-weight: 400;
+        color: #000;
+        letter-spacing: .7px;
+        margin-bottom: 0px;
+    }
+    .author{
+        font-size: 14px;
+        color: #21282d;
+        margin: 10px 0 0 0;
+    }
+}
+a{
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    color: #347d56;
+    text-decoration: none;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+}
