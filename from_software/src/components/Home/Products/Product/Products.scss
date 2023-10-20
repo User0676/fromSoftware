@@ -14,7 +14,19 @@
         @include md{
             margin-bottom: 35px;
             font-size: 24px;
-            
+
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            margin-top: 5px;
+            width: 50px;
+            height: 3px;
+            background-color: blanchedalmond;
+            #include md{
+                margin-top: 10px;
+            }
         }
     }
 
