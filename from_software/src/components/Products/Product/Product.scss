@@ -1,10 +1,10 @@
 //@import "../../css-config/mixins.scss";
 
-/*.product-card{
+.product-card{
     width: calc(90% - 5px);
     margin-bottom: 20px;
+}
 
-}*/
 
 
 .product-image{
@@ -25,5 +25,26 @@
     transition: all ease 0.3s;
     display:block;
     width: 100%;
+    }
+}
+
+.prod-details{
+    .name{
+        font-size:14px;
+        display:block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
+
+    }
+    .price{
+        font-size:18px;
+
+    }
+
+    &:hover{
+        img{
+            transform: scale(1.2) ;
+        }
     }
 }
