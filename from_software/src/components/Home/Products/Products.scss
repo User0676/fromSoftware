@@ -1,4 +1,4 @@
-@import "../../css-config/mixins.scss";
+
 .products-container{
     margin: 50px 0;
     @include md {
@@ -29,5 +29,12 @@
             }
         }
     }
-
+    .products{
+        display:flex;
+        flex-flow:wrap;
+        gap: 10px;
+        @include md{
+            gap: 20px;
+        }
+    }
 }
