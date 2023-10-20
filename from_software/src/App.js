@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import Home from "./components/Home/Home";
-import Category from "./components/Category/Category";
+// import Category from "./components/Category/Category";
 import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category/:id" element={<Category />} />
+        {/* <Route path="/category/:id" element={<Category />} /> */}
         <Route path="/products/:id" element={<Products />} />
         <Route path="/barnes" element={<Barnes />} />
 
