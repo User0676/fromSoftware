@@ -1,5 +1,12 @@
+import "./Category.scss"
+import Product from "../Products/Products";
 const Category = () => {
-    return <div>Category</div>;
+    return <div className="category-main-content">
+        <div className="layout">
+            <div className="category-title">Category Title</div>
+            {/* <Products /> */}
+        </div>
+    </div>;
 };
 
 export default Category;
