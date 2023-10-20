@@ -1,15 +1,19 @@
 //@import "../../css-config/mixins.scss";
 
-.product-card{
+/*.product-card{
     width: calc(90% - 5px);
     margin-bottom: 20px;
-}
+}*/
 
 
 
 .product-image{
     max-width:150px;
     max-height: 250px;
+    margin-top: 0%;
+    margin-right:0%;
+    margin-left:0%;
+    margin-bottom:0%;
 }
 
 .thumbnails{
