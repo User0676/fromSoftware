@@ -1,5 +1,5 @@
 import "./Product.scss"
-import ProductList from "./ProductList";
+
 
 
 
