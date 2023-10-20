@@ -1,5 +1,7 @@
+import "./Armour.scss";
+
 const Armour = () => {
-    return <div>Armour</div>;
+    return <div className="Armour">Armour</div>;
 };
 
 export default Armour;
