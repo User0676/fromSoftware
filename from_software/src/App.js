@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Barnes from "./components/Barnes/Barnes";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
+import Bookshow from './components/Books/Bookshow';
 
 
 
@@ -17,7 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-
+       <Route path="/category/:id" element={<Bookshow />} />
         <Route path="/products/:id" element={<Products />} />
         <Route path="/barnes" element={<Barnes />} />
 
