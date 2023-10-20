@@ -1,7 +1,8 @@
 import "./Products.scss";
 import Product from "./Product/Product";
 const Products = () => {
-    return ( <div className="products-container">
+    return (
+         <div className="products-container">
 
         <div className="sec-heading"> Section Heading</div>
         <div className="products">
