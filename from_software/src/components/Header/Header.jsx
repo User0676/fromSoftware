@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { TbSearch } from "react-icons/tb"
 import { AiOutlineHeart } from "react-icons/ai"
 import { CgShoppingCart } from "react-icons/cg"
+import { Link } from "react-router-dom";
 
 import Cart from "../Cart/Cart";
 
@@ -28,8 +29,9 @@ const Header = () => {
             <header className={`main-header ${scrolled? 'sticky-header' : ''}` }>
                 <div className="header-content">
                     <ul className="left">
-                        <li>Home</li>
-                        <li>Categories</li>
+                        <li><Link to="/" className="router-link">Home</Link></li>
+                        <li><Link to="/products/:id" className="router-link">Products</Link></li>
+                        <li><Link to="/category/1" className="router-link">Category</Link></li>
                     </ul>
                     <div className="center">BookStore</div>
                     <div className="right">
