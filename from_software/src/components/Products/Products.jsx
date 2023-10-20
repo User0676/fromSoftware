@@ -13,6 +13,8 @@ const Products = ({innerPage}) => {
                 <Product />
                 <Product />
                 <Product />
+                <Product />
+                <Product />
             </div>
         </div>
     
