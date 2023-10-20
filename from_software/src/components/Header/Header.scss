@@ -34,9 +34,6 @@
         .center{
             font-size: 30px;
             font-weight: 700;
-            // position: absolute;
-            // left: 50%;
-            // transform: translateX(-50%);
             cursor: pointer;
         }
         .right{
@@ -49,5 +46,33 @@
                 cursor: pointer;
             }
         }
+        .cart-icon{
+            position: relative
+            span{
+                min-width: 20px;
+                text-align: center;
+                background-color: #8e2de2;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 10px;
+                 
+            };
+        }
     }
+
+    &.sticky-header{
+        position: sticky;
+        top: 0;
+        transform: translateY(-80px);
+        animation: stickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes stickyHeader {
+    0%{transform: translateY(-80px);}
+    100%{transform: translateY(0);}
 }

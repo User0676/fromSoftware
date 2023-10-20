@@ -9,12 +9,9 @@ const Home = () => {
            <Link to="/barnes"> <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2023/09/27/27677_Quote_A1_DiscoverShortlistAnnouncement_09-27.jpg" alt="banner"></img></Link>
 
             <div className="main-content">
-
                 <div className="layout">
-                <Category/>
-                <Products/>
-
-
+                    <Category/>
+                    <Products/>
                 </div>
             </div>
         </div>
