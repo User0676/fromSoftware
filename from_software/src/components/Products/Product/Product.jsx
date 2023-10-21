@@ -1,21 +1,90 @@
-import "./Product.scss"
+import React from 'react';
+import './Product.scss';
 
-
-
-
-function Product({product}) {
+function Product({ product }) {
   return (
-    <div className="product-card">
+    <><div className="product-grid">
+      <div className="product-card">
         <div className="thumbnail">
-          <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9780374609870_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book" className="product-image" />
+          <img src="/images/book1.jpg" alt="book" className="product-image" />
         </div>
         <div className="prod-details">
-          <span className="name">Product name</span>
-          <span className="price"> 499 KZT</span>
+          <span className="name">Five Nights at Freddys</span>
+          <span className="price">4990 KZT</span>
         </div>
-    </div>
-  )
-}
+      </div>
 
+      <div className="product-card">
+        <div className="thumbnail">
+          <img src="/images/book2.jpg" alt="book" className="product-image" />
+        </div>
+        <div className="prod-details">
+          <span className="name">Мятная сказка</span>
+          <span className="price">2990 KZT</span>
+        </div>
+      </div>
+
+      <div className="product-card">
+        <div className="thumbnail">
+          <img src="/images/book3.jpg" alt="book" className="product-image" />
+        </div>
+        <div className="prod-details">
+          <span className="name">Индивидуум</span>
+          <span className="price">499  KZT</span>
+        </div>
+      </div>
+
+      <div className="product-card">
+        <div className="thumbnail">
+          <img src="/images/book4.jpg" alt="book" className="product-image" />
+        </div>
+        <div className="prod-details">
+          <span className="name">Orange Juice</span>
+          <span className="price">3990 KZT</span>
+        </div>
+      </div>
+    </div><div className="product-grid">
+        <div className="product-card">
+          <div className="thumbnail">
+            <img src="/images/book5.jpg" alt="book" className="product-image" />
+          </div>
+          <div className="prod-details">
+            <span className="name">Жестокий принц</span>
+            <span className="price">9990 KZT</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <div className="thumbnail">
+            <img src="/images/book6.jpg" alt="book" className="product-image" />
+          </div>
+          <div className="prod-details">
+            <span className="name">Дыши</span>
+            <span className="price">2590 KZT</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <div className="thumbnail">
+            <img src="/images/book7.jpg" alt="book" className="product-image" />
+          </div>
+          <div className="prod-details">
+            <span className="name">Государство Строгого режима</span>
+            <span className="price">499 KZT</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <div className="thumbnail">
+            <img src="/images/book8.jpg" alt="book" className="product-image" />
+          </div>
+          <div className="prod-details">
+            <span className="name">Часы звезд</span>
+            <span className="price">3790 KZT</span>
+          </div>
+        </div>
+      </div></>
+  );
+}
 
 export default Product;
