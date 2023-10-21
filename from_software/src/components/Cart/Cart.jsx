@@ -12,7 +12,7 @@ const Cart =({setShowCart})=>{
                 <div className="cart-header">
                     <span className="heading">Shopping Cart</span>
                     <span 
-                        className="close-bth" 
+                        className="close-btn" 
                         onClick={()=>setShowCart(false)}
                     >
                         <MdClose />
