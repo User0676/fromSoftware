@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Barnes from "./components/Barnes/Barnes";
 import Empty from "./components/Empty/Empty";
-// import SingleProduct from "./components/SingleProduct/SingleProduct";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 
 
 
@@ -20,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/products/:id" element={<Products />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/barnes" element={<Barnes />} />
         <Route path="/find" element={<Empty />} />
         <Route path="/favourite" element={<Empty />} />

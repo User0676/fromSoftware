@@ -35,11 +35,11 @@ const Header = () => {
                     </ul>
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
                     <div className="right">
-                      <Link to="/find" className="router-link">  <TbSearch /> </Link>
+                        <Link to="/find" className="router-link"><TbSearch /></Link>
                         <Link to="/favourite" className="router-link"><AiOutlineHeart /></Link>
                         <span 
                             className="cart-icon" 
-                            onClick={()=>setShowCart(true)}
+                            onClick={() => setShowCart(true)}
                         >
                             <CgShoppingCart />
                             {/* <span>5</span> */}
