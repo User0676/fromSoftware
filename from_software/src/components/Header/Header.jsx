@@ -6,12 +6,15 @@ import { CgShoppingCart } from "react-icons/cg"
 import { Link } from "react-router-dom";
 
 import Cart from "../Cart/Cart";
+import Search from "./Search/Search";
 
 import "./Header.scss";
 import React from "react";
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [showCart, setShowCart] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
     const handleScroll = ()=>{
         const offset = window.scrollY
         if(offset>60){
@@ -20,10 +23,10 @@ const Header = () => {
             setScrolled(false);
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         window.addEventListener("scroll", handleScroll)
     }, [])
-    const [showCart, setShowCart] = useState(false);
+    
     return (
         <>
             <header className={`main-header ${scrolled? 'sticky-header' : ''}` }>
@@ -35,8 +38,8 @@ const Header = () => {
                     </ul>
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
                     <div className="right">
-                        <Link to="/find" className="router-link"><TbSearch /></Link>
-                        <Link to="/favourite" className="router-link"><AiOutlineHeart /></Link>
+                        <TbSearch onClick={() => setShowSearch(true)} />
+                        <AiOutlineHeart />
                         <span 
                             className="cart-icon" 
                             onClick={() => setShowCart(true)}
@@ -47,7 +50,8 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            {showCart && <Cart setShowCart={setShowCart}/>}
+            {showCart && <Cart setShowCart={setShowCart} />}
+            {showSearch && <Search setShowSearch={setShowSearch} />}
         </>
     );
 };
