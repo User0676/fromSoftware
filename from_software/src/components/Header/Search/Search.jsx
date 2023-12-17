@@ -1,28 +1,76 @@
+import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
-import "./Search.scss"
+import "./Search.scss";
+import useFetch from "../../../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({ setShowSearch }) => {
+    const [query, setQuery] = useState("");
+    const navigate = useNavigate();
+
+    const onChange = (e) => {
+        setQuery(e.target.value);
+    };
+
+    let { data } = useFetch(
+        `/api/products?populate=*&filters[title][$contains]=${query}`
+    );
+
+    if (!query.length) {
+        data = null;
+    }
+
     return (
         <div className="search-modal">
             <div className="form-field">
-                <input 
-                    type="text" 
+                <input
                     autoFocus
+                    type="text"
                     placeholder="Search for products"
+                    value={query}
+                    onChange={onChange}
                 />
-                <MdClose onClick={() => setShowSearch(false)} />
+                <MdClose
+                    className="close-btn"
+                    onClick={() => setShowSearch(false)}
+                />
             </div>
             <div className="search-result-content">
-                <div className="search-results">
-                    <div className="search-result-item">
-                        <div className="img-container">
-                            <img src={"https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9780374609870_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D"} alt="" />
-                        </div>
-                        <div className="prod-details">
-                            <span className="name">product name</span>
-                            <span className="desc">product description</span>
-                        </div>
+                {!data?.data?.length && (
+                    <div className="start-msg">
+                        Start typing to see products you are looking for.
                     </div>
+                )}
+                <div className="search-results">
+                    {data?.data?.map((item) => (
+                        <div
+                            className="search-result-item"
+                            key={item.id}
+                            onClick={() => {
+                                navigate("/product/" + item.id);
+                                setShowSearch(false);
+                            }}
+                        >
+                            <div className="img-container">
+                                <img
+                                    src={
+                                        process.env
+                                            .REACT_APP_DEV_URL +
+                                        item.attributes.img.data[0].attributes
+                                            .url
+                                    }
+                                />
+                            </div>
+                            <div className="prod-details">
+                                <span className="name">
+                                    {item.attributes.title}
+                                </span>
+                                <span className="desc">
+                                    {item.attributes.description}
+                                </span>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

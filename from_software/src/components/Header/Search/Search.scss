@@ -39,6 +39,11 @@
     .search-result-content{
         max-width: 800px;
         margin: 0 auto;
+        .start-msg {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+        }
         .search-results {
             height: calc(100vh - 160px);
             overflow: auto;
@@ -52,8 +57,8 @@
                 cursor: pointer;
                 .img-container {
                     background-color: rgba(0, 0, 0, 0.05);
-                    width: 60px;
-                    height: 60px;
+                    width: 80px;
+                    height: 110px;
                     flex-shrink: 0;
                     img {
                         width: 100%;
