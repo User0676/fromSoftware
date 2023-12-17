@@ -38,7 +38,6 @@ const Header = () => {
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
                     <div className="right">
                         <TbSearch onClick={() => setShowSearch(true)} />
-                        <AiOutlineHeart />
                         <span 
                             className="cart-icon" 
                             onClick={() => setShowCart(true)}
