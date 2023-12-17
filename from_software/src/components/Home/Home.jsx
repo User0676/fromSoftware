@@ -35,7 +35,14 @@ const Home = () => {
 
             <div className="main-content">
                 <div className="layout">
+                    <div className="sec-heading">Categories</div>
                     <Category categories={categories} />
+                    <div className="titles">
+                        <span className="horrors">Horrors</span>
+                        <span className="fantasy">Fantasy</span>
+                        <span className="mystery">Mystery</span>
+                        <span className="science">Science fiction</span>
+                    </div>
                     <Products 
                         products={products} 
                         headingText="Popular Products"

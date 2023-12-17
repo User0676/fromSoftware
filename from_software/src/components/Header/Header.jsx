@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import { TbSearch } from "react-icons/tb"
-import { AiOutlineHeart } from "react-icons/ai"
 import { CgShoppingCart } from "react-icons/cg"
 import { Link } from "react-router-dom";
 
