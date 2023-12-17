@@ -33,7 +33,6 @@ const Header = () => {
                 <div className="header-content">
                     <ul className="left">
                         <li><Link to="/" className="router-link">Home</Link></li>
-                        <li><Link to="/products/:id" className="router-link">Products</Link></li>
                         <li><Link to="/category/1" className="router-link">Category</Link></li>
                     </ul>
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
