@@ -11,3 +11,26 @@ body {
   line-height: 22px;
   font-weight: 500;
 }
+
+// NAV
+.custom-nav .collapse{
+  justify-content: flex-end;
+}
+
+//login
+.login {
+  min-height: 100vh;
+  align-items: center;
+}
+
+.login h6{
+  margin-top: 15px;
+}
+
+//logout
+
+//registration
+.register {
+  min-height: 100vh;
+  align-items: center;
+}

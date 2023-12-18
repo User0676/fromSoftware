@@ -10,6 +10,12 @@ import Barnes from "./components/Barnes/Barnes";
 import Empty from "./components/Empty/Empty";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import AppContext from "./utils/context";
+import Login from "./components/Login/Login";
+import Logout from "./components/Logout/Logout";
+import Registration from "./components/Registration/Registration";
+import { ToastContainer } from "react-toastify";
+import { Protector } from "./helpers";
+import { Component } from "react";
 
 
 function App() {
@@ -18,14 +24,18 @@ function App() {
       <AppContext>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Protector Component={Home} />} />
           <Route path="/category/:id" element={<Category />} />
           <Route path="/products/:id" element={<Products />} />
           <Route path="/product/:id" element={<SingleProduct />} />
           <Route path="/barnes" element={<Barnes />} />
           <Route path="/find" element={<Empty />} />
           <Route path="/favourite" element={<Empty />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/registration" element={<Registration />} />
         </Routes>
+        <ToastContainer />
         <Footer />
       </AppContext>
     </BrowserRouter>

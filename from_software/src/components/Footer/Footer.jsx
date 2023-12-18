@@ -1,8 +1,10 @@
 import React from "react";
 import "./Footer.scss";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
-// import Payment from "../../assets/payment.png";
+import { useNavigate } from "react-router-dom";
+
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <footer className="footer">
             <hr></hr>
@@ -38,12 +40,10 @@ const Footer = () => {
                 </div>
                 <div className="col">
                     <div className="title">Categories</div>
-                    <span className="text">Books</span>
-                    <span className="text">eBooks</span>
-                    <span className="text">Audiobooks</span>
-                    <span className="text">Kids</span>
-                    <span className="text">Teens</span>
-                    <span className="text">Adults</span>
+                    <span className="text" onClick={() => navigate("/category/1")}>Horrors</span>
+                    <span className="text" onClick={() => navigate("/category/2")}>Science fiction</span>
+                    <span className="text" onClick={() => navigate("/category/3")}>Mystery</span>
+                    <span className="text" onClick={() => navigate("/category/4")}>Fantasy</span>
                 </div>
                 <div className="col">
                     <div className="title">Pages</div>

@@ -32,7 +32,7 @@ const Header = () => {
                 <div className="header-content">
                     <ul className="left">
                         <li><Link to="/" className="router-link">Home</Link></li>
-                        <li><Link to="/category/1" className="router-link">Category</Link></li>
+                        <li><Link to="/logout" className="router-link">Log out</Link></li>
                     </ul>
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
                     <div className="right">

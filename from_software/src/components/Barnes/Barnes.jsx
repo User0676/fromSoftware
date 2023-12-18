@@ -1,6 +1,8 @@
 import "./Barnes.scss";
+import { useNavigate } from "react-router-dom";
 
 const Barnes = () => {
+    const navigate = useNavigate();
     return (
         <div className="barnes">
             <div className="barnes-text">
@@ -8,7 +10,7 @@ const Barnes = () => {
                 <h2 className="medium-text">Announcing Our 2023 Finalists!</h2>
                 <h3 className="small-text">Check back on October 30th, when the winner will be revealed.</h3>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/1")}>
                 <span className="rule-heading">Chain Gang All Stars</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780593317334_p0_v4_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="book pic"></img>
@@ -20,7 +22,7 @@ const Barnes = () => {
                     </div>
                 </div>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/2")}>
                 <span className="rule-heading">Where There Was Fire</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9781250817389_p0_v7%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book pic"></img>
@@ -32,7 +34,7 @@ const Barnes = () => {
                     </div>
                 </div>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/3")}>
                 <span className="rule-heading">In Memoriam</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9780593534564_p0_v3%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book pic"></img>
@@ -44,7 +46,7 @@ const Barnes = () => {
                     </div>
                 </div>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/4")}>
                 <span className="rule-heading">The East Indian</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9781668004524_p0_v3%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book pic"></img>
@@ -56,7 +58,7 @@ const Barnes = () => {
                     </div>
                 </div>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/5")}>
                 <span className="rule-heading">Open Throat</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9780374609870_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book pic"></img>
@@ -68,7 +70,7 @@ const Barnes = () => {
                     </div>
                 </div>
             </div>
-            <div className="book">
+            <div className="book" onClick={() => navigate("/product/6")}>
                 <span className="rule-heading">The Berry Pickers</span>
                 <div className="description">
                     <img src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9781646221950_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D" alt="book pic"></img>
