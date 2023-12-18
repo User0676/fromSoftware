@@ -23,8 +23,9 @@
             padding-left: 200px;
             list-style-type: none;
             display: flex;
-            gap: 25px;
+            gap: 50px;
             li{
+                margin-top: 15px;
                 font-size: 14px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -32,18 +33,23 @@
             }
         }
         .center{
+            margin-left: 100px;
             font-size: 30px;
             font-weight: 700;
             cursor: pointer;
         }
         .right{
-            padding-right: 200px;
+            // padding-right: 200px;
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 40px;
             svg{
                 font-size: 24px;
                 cursor: pointer;
+            }
+            .logout{
+                color: white;
+                margin-left: 150px;
             }
         }
         .cart-icon{

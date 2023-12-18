@@ -3,8 +3,13 @@ import "./Footer.scss";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ isLoggedIn }) => {
     const navigate = useNavigate();
+
+    if (!isLoggedIn) {
+        return null;
+    }
+
     return (
         <footer className="footer">
             <hr></hr>
@@ -59,7 +64,6 @@ const Footer = () => {
                         <div className="text">
                             BOOKSTORE 2023 CREATED BY VISUAL STUDIO CODE, CODED BY FROMSOFTWARE.  
                         </div>
-                        {/* <img src={Payment} /> */}
                     </div>
                 </div>
             </div>

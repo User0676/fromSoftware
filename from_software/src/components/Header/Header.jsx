@@ -10,10 +10,11 @@ import Search from "./Search/Search";
 import "./Header.scss";
 import React from "react";
 
-const Header = () => {
+const Header = ({ isLoggedIn }) => {
     const [scrolled, setScrolled] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+
     const handleScroll = ()=>{
         const offset = window.scrollY
         if(offset>60){
@@ -25,15 +26,15 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
     }, [])
-    
+
+    if (!isLoggedIn) {
+        return null;
+    }
+
     return (
         <>
             <header className={`main-header ${scrolled? 'sticky-header' : ''}` }>
                 <div className="header-content">
-                    <ul className="left">
-                        <li><Link to="/" className="router-link">Home</Link></li>
-                        <li><Link to="/logout" className="router-link">Log out</Link></li>
-                    </ul>
                     <div className="center"><Link to="/" className="router-link">BookStore</Link></div>
                     <div className="right">
                         <TbSearch onClick={() => setShowSearch(true)} />
@@ -42,8 +43,8 @@ const Header = () => {
                             onClick={() => setShowCart(true)}
                         >
                             <CgShoppingCart />
-                            {/* <span>5</span> */}
                         </span>
+                        <span className="logout"><Link to="/logout">Log out</Link></span>
                     </div>
                 </div>
             </header>

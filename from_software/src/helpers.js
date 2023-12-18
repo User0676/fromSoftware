@@ -27,5 +27,7 @@ export const Protector = ({ Component }) => {
     }
   }, [navigate, jwt]);
 
-  return <Component />;
+  const isLoggedIn = !!jwt;
+
+  return <Component isLoggedIn={isLoggedIn} />;
 };

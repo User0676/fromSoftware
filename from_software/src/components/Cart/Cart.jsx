@@ -31,9 +31,15 @@ const Cart = ({ setShowCart }) => {
         }
     };
 
+    const closeCart = (e) => {
+        if (e.target.classList.contains("opac-layer")) {
+            setShowCart(false);
+        }
+    };
+
     return (
         <div className="cart-panel">
-            <div className="opac-layer"></div>
+            <div className="opac-layer" onClick={closeCart}></div>
             <div className="cart-content">
                 <div className="cart-header">
                     <span className="heading">Shopping Cart</span>

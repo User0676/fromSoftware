@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Col, Row, Button, FormGroup, Input } from "reactstrap";
+import "./Registration.scss"
 
 const initialUser = { email: "", password: "", username: "" };
 const Registration = () => {

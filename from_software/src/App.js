@@ -15,14 +15,15 @@ import Logout from "./components/Logout/Logout";
 import Registration from "./components/Registration/Registration";
 import { ToastContainer } from "react-toastify";
 import { Protector } from "./helpers";
-import { Component } from "react";
+// import { Component } from "react";
 
 
 function App() {
   return (
     <BrowserRouter>
       <AppContext>
-        <Header />
+        {/* <Header /> */}
+        <Protector Component={Header} />
         <Routes>
           <Route path="/" element={<Protector Component={Home} />} />
           <Route path="/category/:id" element={<Category />} />
@@ -36,7 +37,8 @@ function App() {
           <Route path="/registration" element={<Registration />} />
         </Routes>
         <ToastContainer />
-        <Footer />
+        {/* <Footer /> */}
+        <Protector Component={Footer} />
       </AppContext>
     </BrowserRouter>
   );

@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { storeUser } from "../../helpers";
+import "./Login.scss"
 
 const initialUser = { password: "", identifier: "" };
 
@@ -67,7 +68,7 @@ const Login = () => {
                         Login
                     </Button>
                     <h6>
-                        Click <Link to="/registration">Here</Link> to sign up
+                        Click <Link to="/registration">here</Link> to sign up
                     </h6>
                 </div>
             </Col>

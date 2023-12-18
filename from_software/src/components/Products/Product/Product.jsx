@@ -17,7 +17,7 @@ function Product({ id, data }) {
         </div>
         <div className="prod-details">
           <span className="name">{data.title}</span>
-          <span className="price">{data.price}</span>
+          <span className="price">{data.price} $</span>
         </div>
       </div>
   );
