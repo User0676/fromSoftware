@@ -22,7 +22,7 @@ export const Protector = ({ Component }) => {
   const { jwt } = userData();
 
   useEffect(() => {
-    if (!jwt) {
+    if (!jwt && window.location.pathname !== "/registration") {
       navigate("/login");
     }
   }, [navigate, jwt]);
